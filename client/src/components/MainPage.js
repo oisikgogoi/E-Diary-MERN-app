@@ -65,12 +65,12 @@ function MainPage() {
               <h3 className='logo'>E-Diary <FontAwesomeIcon className='logo-icon' icon={faPencil} /></h3> 
 
           <div className='main-nav-right'>
-              <div className='search'>
+              {/* <div className='search'>
                   <input />
                   <Link to={''}>
                       <FontAwesomeIcon className="search-icon" icon={faSearch} />
                   </Link>
-              </div>
+              </div> */}
 
               <Link to={'/create-note'}><button className='create-button'>create <FontAwesomeIcon className='plus-icon' icon={faPlus} /></button></Link>
           </div>
@@ -123,28 +123,6 @@ const NavBar = styled.div`
         flex-direction:row;
       }
 
-      .search{
-        margin-right:2rem;
-        height:2rem;
-        width:18rem;
-        background:white;
-        border:1px solid grey;
-        overflow:hidden;
-      }
-      .search input{
-        width:80%;
-        height:100%;
-        border:none;
-        border-right:1px solid grey;
-        outline:none;
-        padding: 0 0 0  1rem ;
-      }
-
-      .search-icon{
-        width:20%;
-        cursor:pointer;
-        color:black;
-      }
 
       .create-button{
         padding:0 1.5rem;
@@ -158,11 +136,6 @@ const NavBar = styled.div`
         background:  rgb(82, 197, 255);
       }
 
-      @media all and (max-width:630px){
-        .search{
-          display:none;
-        }
-      }
 `
 
 const Main = styled.div`
